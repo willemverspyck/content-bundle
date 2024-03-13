@@ -19,7 +19,7 @@ final class PageService
     /**
      * @throws Exception
      */
-    public function getContent(PageInterface $page, string $slug): ?EntityInterface
+    public function getEntity(PageInterface $page, string $slug): ?EntityInterface
     {
         $repository = $this->repositoryService->getRepository($page->getContentName());
 
