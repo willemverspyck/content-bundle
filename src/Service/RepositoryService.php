@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Spyck\ContentBundle\Service;
 
-use Spyck\ContentBundle\Repository\RepositoryInterface;
 use Countable;
 use Exception;
 use IteratorAggregate;
+use Spyck\ContentBundle\Repository\RepositoryInterface;
 use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 
 final class RepositoryService

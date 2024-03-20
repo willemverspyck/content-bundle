@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Spyck\ContentBundle\Service;
 
+use Exception;
 use Spyck\ContentBundle\Entity\EntityInterface;
 use Spyck\ContentBundle\Entity\PageInterface;
-use Exception;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
