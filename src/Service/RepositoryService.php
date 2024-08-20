@@ -24,9 +24,9 @@ final class RepositoryService
      */
     public function getRepository(string $name): RepositoryInterface
     {
-        foreach ($this->repositories->getIterator() as $index => $view) {
+        foreach ($this->repositories->getIterator() as $index => $repository) {
             if ($index === $name) {
-                return $view;
+                return $repository;
             }
         }
 
