@@ -8,14 +8,14 @@ use Countable;
 use Exception;
 use IteratorAggregate;
 use Spyck\ContentBundle\Repository\RepositoryInterface;
-use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
+use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 
 final class RepositoryService
 {
     /**
      * @param Countable&IteratorAggregate $repositories
      */
-    public function __construct(#[TaggedIterator(tag: 'spyck.content.repository', defaultIndexMethod: 'getContentName')] private iterable $repositories)
+    public function __construct(#[AutowireIterator(tag: 'spyck.content.repository', defaultIndexMethod: 'getContentName')] private iterable $repositories)
     {
     }
 
