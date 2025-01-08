@@ -21,6 +21,10 @@ final class PageService
      */
     public function getEntity(PageInterface $page, string $slug): ?EntityInterface
     {
+        if (null === $page->getContentName()) {
+            throw new NotFoundHttpException(sprintf('Content not found (%s)', $slug));
+        }
+
         $repository = $this->repositoryService->getRepository($page->getContentName());
 
         $request = $this->requestStack->getMainRequest();
